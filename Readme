@@ -3,9 +3,12 @@ Ceci est mon fichier readme.
 
 
 <p>ceci est mon premier paragraphe<p>
+<<<<<<< HEAD
 
 <p>paragraphe de p2<p>
 
 mod1
 mod2
 
+=======
+>>>>>>> p1
