@@ -8,29 +8,62 @@
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
     <script src="../js/app.js"></script>
-    
+
 </head>
 
 <body ng-controller="myAppCtrl">
     <nav class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-     	<ul class="nav">
-        <li> <a href="#">Accueil</a> </li>
-        <li> <a href="#">Liens</a> </li>
-        <li> <a href="#" ng-controller-init="voir=false" ng-click="voir=!voir" >Témoignages</a><ul>
-            <li ng-show="voir" ng-repeat="user in data">{{user.nom}}</li>
-        </ul> </li>
-            <li> <a href="#" ng-controller-init="voir2=false" ng-click="voir2=!voir2" >Références</a><ul> 
-                    <li ng-show="voir2" ng-repeat="user in data">{{user.age}}</li>
-        
-            </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-        
- 
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li>
+                        <a href="#">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#">Liens</a>
+                    </li>
+
+                    <li>
+                        <a href="#" ng-controller-init="voir=false" ng-click="voir=!voir">Témoignages</a>
+                        <ul>
+                            <li ng-show="voir" ng-repeat="user in data">{{user.nom}}</li>
+                        </ul>
+                    </li>
+                    <li>
+                       <span class=" dropdown" id="dropdownMenu1" data-toggle="dropdown">
+                                Dropdown
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#">Action</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#">Another action</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#">Something else here</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#" ng-controller-init="voir2=false" ng-click="voir2=!voir2">Références</a>
+                        <ul>
+                            <li ng-show="voir2" ng-repeat="user in data">{{user.age}}</li>
+
+                    </li>
+
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+
     Une variable angularjs : {{helloWorld}}
     <br>Que je controle par ce champ :
     <input type="text" ng-model="helloWorld" />
@@ -40,7 +73,29 @@
     <button ng-click="getDataBtn()">Datas</button>
     <div>
         <ul>
-            <li  ng-repeat="user in data">{{user.nom}}</li>
+            <li ng-repeat="user in data">{{user.nom}}</li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Action</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Another action</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Something else here</a>
+            </li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Separated link</a>
+            </li>
         </ul>
     </div>
 </body>
